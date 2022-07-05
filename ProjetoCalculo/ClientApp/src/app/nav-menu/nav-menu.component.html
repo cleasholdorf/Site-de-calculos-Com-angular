@@ -1,0 +1,58 @@
+<header>
+  <nav
+    class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"
+  >
+    <div class="container">
+      <a class="navbar-brand" [routerLink]="['/']">ProjetoCalculo</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target=".navbar-collapse"
+        aria-label="Toggle navigation"
+        [attr.aria-expanded]="isExpanded"
+        (click)="toggle()"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse"
+        [ngClass]="{ show: isExpanded }"
+      >
+        <ul class="navbar-nav flex-grow">
+          <li
+            class="nav-item"
+            [routerLinkActive]="['link-active']"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <a class="nav-link text-dark" [routerLink]="['/']">Home</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-dark" [routerLink]="['/listarcalculo']"
+              >listar</a
+            >
+          </li>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-dark" [routerLink]="['/fetch-data']"
+              >nda</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<ul class="nav flex-column">
+    <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="https://localhost:44343/basico">Basico: Soma e Subtracao</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="https://localhost:44343/basico2">Basico: Multicacao e Divisao</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="https://localhost:44343/basico3">Basico: Potencia e Raiz</a>
+    </li>
+        <li class="nav-item">
+        <a class="nav-link disabled">Disabled</a>
+    </li>
+</ul>
