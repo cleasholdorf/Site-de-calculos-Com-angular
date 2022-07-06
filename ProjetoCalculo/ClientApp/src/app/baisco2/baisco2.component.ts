@@ -11,6 +11,8 @@ export class Baisco2Component implements OnInit {
     numero: number;
     x: number;
     y: number;
+    resultado: number;
+
     multipicar(x, y): void {
         this.http.get<number>(this.baseUrl + `api/metodos/multipicar?x=${x}&y=${y}`).subscribe(mul => {
             this.numero = mul;
@@ -19,7 +21,7 @@ export class Baisco2Component implements OnInit {
     }
     dividir(x, y): void {
         this.http.get<number>(this.baseUrl + `api/metodos/divisao?x=${x}&y=${y}`).subscribe(sub => {
-            this.numero = sub;
+            this.resultado = sub;
             console.log(sub)
         })
     }

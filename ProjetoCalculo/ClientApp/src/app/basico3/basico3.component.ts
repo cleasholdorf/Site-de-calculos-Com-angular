@@ -13,6 +13,7 @@ export class Basico3Component implements OnInit {
     x: number;
     y: number;
     z: number;
+    bool: boolean = true;
 
     potencia(x): void {
         this.http.get<number>(this.baseUrl + `api/metodos/potencia?x=${x}`).subscribe(mul => {
@@ -20,12 +21,13 @@ export class Basico3Component implements OnInit {
             console.log(mul)
         })
     }
-    raiz(z): void {
-        this.http.get<number>(this.baseUrl + `api/metodos/raiz?z=${z}`).subscribe(sub => {
+    raiz(x): void {
+        this.http.get<number>(this.baseUrl + `api/metodos/raiz?x=${x}`).subscribe(sub => {
             this.resultado = sub;
             console.log(sub)
         })
     }
+
 
     constructor(private http: HttpClient, @Inject('BASE_URL') private baseUrl: string) {
 

@@ -11,6 +11,10 @@ export class BasicoComponent implements OnInit {
     numero: number;
     x: number;
     y: number;
+    a: number;
+    b: number;
+    resultado: number;
+
     somar(x, y): void {
         this.http.get<number>(this.baseUrl + `api/metodos/somar?x=${x}&y=${y}`).subscribe(soma => {
             this.numero = soma;
@@ -19,7 +23,7 @@ export class BasicoComponent implements OnInit {
     }
     subtracao(x, y): void {
         this.http.get<number>(this.baseUrl + `api/metodos/subtracao?x=${x}&y=${y}`).subscribe(sub => {
-            this.numero = sub;
+            this.resultado = sub;
             console.log(sub)
         })
     }
