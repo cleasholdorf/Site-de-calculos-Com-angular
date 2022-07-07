@@ -1,7 +1,7 @@
 <div>
-    <input [(ngModel)]="x" />
+    <input [(ngModel)]="x" />informe o Numero
     <button  (click)="potencia(x)">Potencia</button>
     <button  (click)="raiz(x)">Raiz</button>
-    <h1  [(ngModel)]="numero">Resultado da potencia= {{numero}}</h1>
-    <h1  [(ngModel)]="resultado">Resultado da raiz= {{resultado}}</h1>
+    <p  [hidden]="numero == null" [(ngModel)]="numero">Resultado da potencia= {{numero}}</p>
+    <p  [hidden]="resultado == null" [(ngModel)]="resultado">Resultado da raiz= {{resultado}}</p>
 </div>

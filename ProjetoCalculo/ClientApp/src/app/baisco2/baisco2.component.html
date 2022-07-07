@@ -1,9 +1,9 @@
 <div>
-    <input [(ngModel)]="x" />
-    <input [(ngModel)]="y" />
+    <input [(ngModel)]="x" />Informe o primeiro Numero
+        <input [(ngModel)]="y" /> Informe o Segundo Numero
     <button (click)="multipicar(x,y)">Multiplicar</button>
     <button (click)="dividir(x,y)">Dividir</button>
-    <h1 [(ngModel)]="numero">Resultado da multiplicacao= {{numero}}</h1>
-    <h1 [(ngModel)]="resultado">Resultado da divisao= {{resultado}}</h1>
+    <p [hidden]="numero == null"[(ngModel)]="numero">Resultado da multiplicacao= {{numero}}</p>
+    <p [hidden]="resultado == null"[(ngModel)]="resultado">Resultado da divisao= {{resultado}}</p>
 </div>
 

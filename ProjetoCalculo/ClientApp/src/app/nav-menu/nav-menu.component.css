@@ -1,18 +1,46 @@
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+#menuPrimario ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
 
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+#menuPrimario li {
+    float: left;
 }
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    #menuPrimario li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+#menuPrimario li a:hover:not(.active) {
+    background-color: #111;
 }
+
+#menuPrimario .active {
+    background-color: #04AA6D;
+}
+#menuSecundario {
+    float :left;
+    width: 300px;
+
+}
+    #menuSecundario ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+#menuSecundario li {
+   height: 50px;
+   text-align:center;
+   padding:10px;
+   border-bottom: solid 1px #fff;
+}
+

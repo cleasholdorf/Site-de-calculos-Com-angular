@@ -97,11 +97,21 @@ namespace ProjetoCalculo.Controllers
             Addcalculo(resultado);
 
             return Convert.ToDouble(resultado1);
-
-
-            
+                                   
         }
+        [HttpGet("[action]")]
+        public double AreaCirculo(double x)
+        {
+            Calculo resultado = new Calculo();
+            resultado.Name = "AreaCirculo";
+            resultado.Formula = "Pir^2";
+            double resultado1 = 3.14 * Math.Pow(x, 2);
+            resultado.Resultado = Convert.ToString(resultado1);
+            Addcalculo(resultado);
 
+            return Convert.ToDouble(resultado1);
+
+        }
 
     }
 }

@@ -1,8 +1,9 @@
 <div>
-    <input [(ngModel)]="x" />
-    <input [(ngModel)]="y" />
+    <input [(ngModel)]="x" />Informe o primeiro numero
+    <input [(ngModel)]="y" />Informe o segundo numero
+    <br />
     <button (click)="somar(x,y)">Somar</button>
     <button (click)="subtracao(x,y)">Subtrair</button>
-    <h1 [(ngModel)]="numero">Resultado da Soma= {{numero}}</h1>
-    <h1 [(ngModel)]="resultado">Resultado da Subtracao={{resultado}}</h1>
+    <p [hidden]="numero == null" [(ngModel)]="numero">Resultado da Soma= {{numero}}</p>
+    <p [hidden]="resultado == null" [(ngModel)]="resultado">Resultado da Subtracao={{resultado}}</p>
 </div>

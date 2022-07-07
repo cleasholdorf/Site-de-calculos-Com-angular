@@ -12,7 +12,7 @@ namespace ProjetoCalculo.Controllers
     {
         private readonly CalculoContext _context;
         public CalculoController(CalculoContext context)
-        { 
+        {
             this._context = context;
         }
         [HttpPost("[action]")]
@@ -40,16 +40,29 @@ namespace ProjetoCalculo.Controllers
             return this._context.Users.Find(id);
         }
 
-
-        
-
         [HttpGet("[action]")]
         public IEnumerable<Calculo> Listcalculo()
         {
             return this._context.Calculos;
         }
-        
-       
+        [HttpPut("[action]")]
+        public void logado(User user, string senha)
+        {
+            string nome = user.Name;
+            senha = user.Senha;
+            this._context.Users.Find(user,senha);
+           
+           
+            this._context.Users.Update(user);
+            this._context.SaveChanges();
+        }
+        [HttpPut("[action]")]
+        public void Deslogar(User usuario)
+        {
+
+            usuario.Estoulogado = false;
+            this._context.Users.Update(usuario);
+            this._context.SaveChanges();
+        }
     }
-  
 }

@@ -12,5 +12,6 @@ namespace ProjetoCalculo.Models
         public string Name { get; set; }
         public string Senha { get; set; }
         public List<Calculo> calculos { get; set; }
+        public bool Estoulogado { get; set; }
     }
 }

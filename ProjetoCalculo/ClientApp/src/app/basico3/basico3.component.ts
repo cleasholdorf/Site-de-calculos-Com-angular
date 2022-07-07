@@ -32,6 +32,9 @@ export class Basico3Component implements OnInit {
     constructor(private http: HttpClient, @Inject('BASE_URL') private baseUrl: string) {
 
     }
+    esconder() {
+        this.bool = !this.bool;
+    }
 
   ngOnInit() {
   }

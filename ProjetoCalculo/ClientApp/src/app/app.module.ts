@@ -15,6 +15,7 @@ import { Baisco2Component } from './baisco2/baisco2.component';
 import { Basico3Component } from './basico3/basico3.component';
 import { LitarCalculosComponent } from './litar-calculos/litar-calculos.component';
 import { AreasComponent } from './areas/areas.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AreasComponent } from './areas/areas.component';
     Baisco2Component,
     Basico3Component,
     LitarCalculosComponent,
-    AreasComponent
+    AreasComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

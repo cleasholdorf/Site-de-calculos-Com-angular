@@ -1,1 +1,8 @@
-<p>areas works!</p>
+<div>
+    <h3>Area do de um circulo</h3>
+    <img src="https://static.todamateria.com.br/upload/57/7d/577d279002e6c-area-do-circulo.jpg?auto_optimize=low" alt="Girl in a jacket" style="width:200px;height:200px;">
+    <h4>Informe o raio</h4>
+    <input [(ngModel)]="x" />
+    <button (click)="areacirculo(x)">Calcular</button>
+    <p [hidden]="resultado == null" [(ngModel)]="numero">Resultado da Area do circulo= {{resultado}}</p>
+</div>
