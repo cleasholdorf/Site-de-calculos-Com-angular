@@ -1,5 +1,6 @@
 <div>
     <input [(ngModel)]="x" />informe o Numero
+    <br />
     <button  (click)="potencia(x)">Potencia</button>
     <button  (click)="raiz(x)">Raiz</button>
     <p  [hidden]="numero == null" [(ngModel)]="numero">Resultado da potencia= {{numero}}</p>

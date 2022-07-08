@@ -2,7 +2,27 @@
     <h3>Area do de um circulo</h3>
     <img src="https://static.todamateria.com.br/upload/57/7d/577d279002e6c-area-do-circulo.jpg?auto_optimize=low" alt="Girl in a jacket" style="width:200px;height:200px;">
     <h4>Informe o raio</h4>
-    <input [(ngModel)]="x" />
+    <input [(ngModel)]="x"/>
     <button (click)="areacirculo(x)">Calcular</button>
     <p [hidden]="resultado == null" [(ngModel)]="numero">Resultado da Area do circulo= {{resultado}}</p>
+</div>
+<div>
+    <h3>Area do de um circulo</h3>
+    <img src="https://neurochispas.com.br/wp-content/uploads/2021/07/formula-para-a-area-de-um-retangulo.png" alt="Girl in a jacket" style="width:200px;height:200px;">
+    <h4>Informe o a Base</h4>
+    <input [(ngModel)]="y"/>
+    <h4>Informe o a Altura</h4>
+    <input [(ngModel)]="z"/>
+    <button (click)="arearetangulo(y,z)">Calcular</button>
+    <p [hidden]="resultado == null" [(ngModel)]="numero">Resultado da Area do retangulo= {{resultado2}}</p>
+</div>
+<div>
+    <h3>Area do de um circulo</h3>
+    <img src="https://neurochispas.com.br/wp-content/uploads/2021/07/formula-para-a-area-de-um-triangulo-retangulo.png" alt="Girl in a jacket" style="width:200px;height:200px;">
+    <h4>Informe o Base</h4>
+    <input [(ngModel)]="a" />
+    <h4>Informe o Altura</h4>
+    <input [(ngModel)]="b" />
+    <button (click)="areacirculo(a,b)">Calcular</button>
+    <p [hidden]="resultado == null" [(ngModel)]="numero">Resultado da Area do circulo= {{resultado3}}</p>
 </div>

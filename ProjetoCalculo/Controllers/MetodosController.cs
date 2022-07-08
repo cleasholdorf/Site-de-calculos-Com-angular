@@ -110,8 +110,29 @@ namespace ProjetoCalculo.Controllers
             Addcalculo(resultado);
 
             return Convert.ToDouble(resultado1);
-
         }
+        [HttpGet("[action]")]
+        public double AreaRetangulo(double y,double z)
+        {
+            Calculo resultado = new Calculo();
+            resultado.Name = "AreaQuadrado";
+            resultado.Formula = "B.H";
+            double resultado1 = y * z;
+            resultado.Resultado = Convert.ToString(resultado1);
+            Addcalculo(resultado);
 
+            return Convert.ToDouble(resultado1);
+        }
+        public double AreaTrianguloRetangulo(double a, double b)
+        {
+            Calculo resultado = new Calculo();
+            resultado.Name = "AreaTrianguloRetangulo";
+            resultado.Formula = "(B.H)/2";
+            double resultado1 = (a * b)/2;
+            resultado.Resultado = Convert.ToString(resultado1);
+            Addcalculo(resultado);
+
+            return Convert.ToDouble(resultado1);
+        }
     }
 }
