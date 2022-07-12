@@ -16,6 +16,7 @@ import { Basico3Component } from './basico3/basico3.component';
 import { LitarCalculosComponent } from './litar-calculos/litar-calculos.component';
 import { AreasComponent } from './areas/areas.component';
 import { LoginComponent } from './login/login.component';
+import { AgradecimentoComponent } from './agradecimento/agradecimento.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { LoginComponent } from './login/login.component';
     Basico3Component,
     LitarCalculosComponent,
     AreasComponent,
-    LoginComponent
+    LoginComponent,
+    AgradecimentoComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -44,6 +46,8 @@ import { LoginComponent } from './login/login.component';
         { path: 'basico3', component: Basico3Component, pathMatch: 'full' },
         { path: 'listarcalculo', component: LitarCalculosComponent, pathMatch: 'full' },
         { path: 'areas', component: AreasComponent, pathMatch: 'full' },
+        { path: 'login', component: LoginComponent, pathMatch: 'full' },
+        { path: 'agradecimento', component: AgradecimentoComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
     ])

@@ -14,7 +14,7 @@
     <h4>Informe o a Altura</h4>
     <input [(ngModel)]="z"/>
     <button (click)="arearetangulo(y,z)">Calcular</button>
-    <p [hidden]="resultado == null" [(ngModel)]="numero">Resultado da Area do retangulo= {{resultado2}}</p>
+    <p [hidden]="resultado2 == null" [(ngModel)]="numero">Resultado da Area do retangulo= {{resultado2}}</p>
 </div>
 <div>
     <h3>Area do de um circulo</h3>
@@ -24,5 +24,5 @@
     <h4>Informe o Altura</h4>
     <input [(ngModel)]="b" />
     <button (click)="areacirculo(a,b)">Calcular</button>
-    <p [hidden]="resultado == null" [(ngModel)]="numero">Resultado da Area do circulo= {{resultado3}}</p>
+    <p [hidden]="resultado3 == null" [(ngModel)]="numero">Resultado da Area do circulo= {{resultado3}}</p>
 </div>
